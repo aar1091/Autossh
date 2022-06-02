@@ -3,13 +3,14 @@ import paramiko,getpass,os
 ssh = paramiko.SSHClient()
 os.system("cls")
 usuario = input("ingrese su nombre de usuario: ")
+
 os.system("cls")
 contrasena=getpass.getpass(prompt="Ingrese la contrasena: ", stream=None)
 os.system("cls")
 comando = input("Ingrese comando a ejecutar: ")
 os.system("cls")
 ip =[]
-ser =" "
+ser ="0"
 while ser != "":
     ser = input("Ingrese la IP del servidor: ")
     ip.append(ser)
@@ -25,4 +26,4 @@ for ip_server in ip:
     print("\r".join(salida.readlines()))
     print("\n")
     ssh.close()
-print(f"Comando '{comando}' aplicado con exito")
+print(f"Comando '{comando}' Aplicado con exito")
